@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { GlobeIcon } from "@/icons/GlobeIcon";
+import { GitHubLogo, HomeLogo, LinkedInIcon, MailLogo } from "@/icons/Icons";
 
 
 const geistSans = Geist({
@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <nav className={styles.menu}>
-          {/* <GlobeIcon /> */}
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <HomeLogo />
+          <GitHubLogo />
+          <LinkedInIcon />
+          <MailLogo />
         </nav>
         {children}
       </body>
