@@ -15,9 +15,9 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>src/app/page.js</code>.
+            Write first npx create-next-app@latest <code>src/app/page.js</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>Next, you can write in your terminal, npm run dev.</li>
         </ol>
 
         <div className={styles.ctas}>
