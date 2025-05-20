@@ -15,11 +15,19 @@
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
+
+/* .Header{
+  display: grid;
+  grid-template-columns: repeat(3, 50px 1fr);
+  justify-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+} */
 .Header{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 6rem;
 }
 .Logo{
   background:rgb(255, 83, 83);
@@ -28,17 +36,29 @@
 }
 .Navbar{
   background:rgb(255, 83, 83);
+  grid-column: span 3;
   width: 80%;
   height: 80px;
 }
+.SearchBar{
+  background:rgb(255, 83, 83);
+  width: 90vw;
+  height: 4rem;
+  margin-top: 1.5rem;
 
-.cards {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  width: 90%;
+  /* grid-row: 3;
+  grid-column: 3; */
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10rem 5rem 0 0;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80vw;
+}
 .cards >div:nth-child(1),
 .cards >div:nth-child(3){
   grid-row: span2;
@@ -51,16 +71,17 @@
   background: rgb(255, 83, 83);
   height: 350px;
   width: 280px;
-  margin: 15px 15px;
   border-radius: 30px;
 }
 
 .Sidebar {
   background:rgb(255, 83, 83);
-  width: 80%;
-  margin-top: 15px;
-  grid-row: span 4;
-  grid-column: span 2;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 16%;
+  height: 100%;
+  margin-top: 10rem;
 }
 
 .Heart {
